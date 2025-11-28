@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+
+    <div style="text-align:center; margin-top:20px;">
+    <button id="connectBtn">Connect Wallet</button>
+    <span id="walletStatus" style="color:white; margin-left:10px;">Not connected</span>
+    </div>
+
+    <div style="text-align:center; margin-top:10px; color:white;">
+        Bet (BNB): <input id="betAmount" type="number" step="0.0001" value="0.0001">
+    </div>
+
+    <div style="text-align:center; margin-top:10px; color:white;">
+        <span id="onchain-info"></span>
+    </div>
+
+
+    <!-- Score board -->
+    <div class="score-board">
+        <div id="user-label" class="badge">user</div>
+        <div id="computer-label" class="badge">computer</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
+    </div>
+
+    <!-- Result text -->
+    <div class="result">
+        <p>Paper covers rock. You win!</p>
+    </div>
+
+    <!-- Choices -->
+    <div class="choices">
+        <div class="choice" id="r">
+            <img src="images/rock.jpg" alt="Rock">
+        </div>
+
+        <div class="choice" id="p">
+            <img src="images/paper.png" alt="Paper">
+        </div>
+
+        <div class="choice" id="s">
+            <img src="images/scissors.jpg" alt="Scissors">
+        </div>
+    </div>
+    
+    <p id="action-msg">Make your move.</p>
+
+    <script src="app.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.2/dist/ethers.umd.min.js"></script>
+
+
+</body>
+</html>
